@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AF87A56-6B35-4D07-8633-D561928402AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TacticaSoftExamen.My.MyApplication</StartupObject>
+    <RootNamespace>TacticaSoftExamen</RootNamespace>
+    <AssemblyName>TacticaSoftExamen</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TacticaSoftExamen.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TacticaSoftExamen.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogic\Services\ClienteService.vb" />
+    <Compile Include="BusinessLogic\Services\ProductoService.vb" />
+    <Compile Include="BusinessLogic\Services\VentaService.vb" />
+    <Compile Include="DataAccess\IRepositories\ICliente.vb" />
+    <Compile Include="DataAccess\IRepositories\IConnection.vb" />
+    <Compile Include="DataAccess\IRepositories\IProducto.vb" />
+    <Compile Include="DataAccess\IRepositories\IVenta.vb" />
+    <Compile Include="DataAccess\IRepositories\IVentaItem.vb" />
+    <Compile Include="DataAccess\Models\Cliente.vb" />
+    <Compile Include="DataAccess\Models\ListItem.vb" />
+    <Compile Include="DataAccess\Models\Producto.vb" />
+    <Compile Include="DataAccess\Models\Venta.vb" />
+    <Compile Include="DataAccess\Models\VentaItem.vb" />
+    <Compile Include="DataAccess\Repositories\ClienteRepository.vb" />
+    <Compile Include="DataAccess\Repositories\Connection.vb" />
+    <Compile Include="DataAccess\Repositories\ProductoRepository.vb" />
+    <Compile Include="DataAccess\Repositories\VentaItemRepository.vb" />
+    <Compile Include="DataAccess\Repositories\VentaRepository.vb" />
+    <Compile Include="DSTacticaSoft.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTacticaSoft.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTacticaSoft.vb">
+      <DependentUpon>DSTacticaSoft.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Presentation\FrmCliente.Designer.vb">
+      <DependentUpon>FrmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FrmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FrmConsultaModificacionVenta.Designer.vb">
+      <DependentUpon>FrmConsultaModificacionVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FrmConsultaModificacionVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FrmProducto.Designer.vb">
+      <DependentUpon>FrmProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FrmProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FrmReportAllVentas.Designer.vb">
+      <DependentUpon>FrmReportAllVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FrmReportAllVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FrmReportProducto.Designer.vb">
+      <DependentUpon>FrmReportProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FrmReportProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FrmReportVenta.Designer.vb">
+      <DependentUpon>FrmReportVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FrmReportVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FrmVentaAgregarItem.Designer.vb">
+      <DependentUpon>FrmVentaAgregarItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FrmVentaAgregarItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FrmVentaRealizar.Designer.vb">
+      <DependentUpon>FrmVentaRealizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FrmVentaRealizar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\MDIMenu.Designer.vb">
+      <DependentUpon>MDIMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MDIMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FrmCliente.resx">
+      <DependentUpon>FrmCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FrmConsultaModificacionVenta.resx">
+      <DependentUpon>FrmConsultaModificacionVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FrmProducto.resx">
+      <DependentUpon>FrmProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FrmReportAllVentas.resx">
+      <DependentUpon>FrmReportAllVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FrmReportProducto.resx">
+      <DependentUpon>FrmReportProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FrmReportVenta.resx">
+      <DependentUpon>FrmReportVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FrmVentaAgregarItem.resx">
+      <DependentUpon>FrmVentaAgregarItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FrmVentaRealizar.resx">
+      <DependentUpon>FrmVentaRealizar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\MDIMenu.resx">
+      <DependentUpon>MDIMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ReporteProductos.rdlc" />
+    <EmbeddedResource Include="Presentation\ReporteVentaById.rdlc" />
+    <EmbeddedResource Include="Presentation\ReportVentas.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSTacticaSoft.xsc">
+      <DependentUpon>DSTacticaSoft.xsd</DependentUpon>
+    </None>
+    <None Include="DSTacticaSoft.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTacticaSoft.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSTacticaSoft.xss">
+      <DependentUpon>DSTacticaSoft.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
